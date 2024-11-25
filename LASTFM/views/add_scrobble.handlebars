@@ -1,0 +1,121 @@
+<style>
+    .container {
+        max-width: 800px;
+        margin: 40px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin: 10px 0 5px;
+    }
+
+    input[type="text"],
+    textarea,
+    input[type="file"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    textarea {
+        height: 100px;
+        resize: none;
+    }
+
+    button {
+        background-color: #e4141e;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #990910;
+    }
+
+    .cancel {
+        background-color: #ccc;
+        color: #333;
+    }
+
+    .cancel:hover {
+        background-color: #999;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-group label{
+        color: #333;
+    }
+
+</style>
+
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="logo">
+        <a href="/">
+            <img src="../imgs/logo.png" alt="LastFm Logo">
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/scrobbles">Scrobbles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/logout">Sair</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<div class="container">
+    <form action="/add_scrobble" method="POST">
+        <H1>Adicionando scrobble...</H1>
+        <div class="form-group">
+            <label for="title">Título da Música:</label>
+            <input type="text" id="title" name="title" placeholder="Informe o título da música...">
+        </div>
+        <div class="form-group">
+            <label for="genero">Genero:</label>
+            <input id="genero" name="genero" placeholder="Informe o gênero da música: Pop, Rock, Clássico..."></input>
+        </div>
+        <div class="form-group">
+            <label for="info">Descrição:</label>
+            <textarea id="info" name="info" placeholder="Informações a mais sobre a música: artista ou banda, álbum, data, curiosidade..." required></textarea>
+        </div>
+        <div class="button-group">
+            <button type="button" class="cancel" onclick="window.location.href='../scrobbles'">Voltar</button>
+            <button type="submit">Scrobblar</button>
+        </div>
+    </form>
+
+</div>

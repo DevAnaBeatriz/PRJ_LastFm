@@ -1,0 +1,340 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about {
+    display: flex;
+    align-items: center; 
+    gap: 140px; 
+}
+
+.about-image {
+    width: 300px; 
+    height: auto;
+    border-radius: 58px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.about-text {
+    flex: 1; 
+}
+
+.about-text h2 {
+    margin-top: 0;
+}
+
+
+
+.about-text p {
+    line-height: 1.5;
+    text-align: justify;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+
+.bodycolor {
+    background: #1e1b1b;
+}
+
+header{
+    background: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    margin-left: -10px;
+    padding-right: 20px;;
+    width: 300px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s;
+    font-size: 1.4rem;
+}
+
+.navbar a:hover {
+    color: #e4141e;
+    transform: scale(1.1);
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.auth-buttons button {
+    background-color: #e4141e;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #ffa726;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(255, 111, 0, 0.4);
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.bar {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 0.5rem;
+    background: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+.scrobbles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 2rem; 
+    margin: 3rem 2rem; 
+    justify-items: center; 
+
+}
+
+
+
+.scrobble-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    width: 100%; 
+    max-width: 700px; 
+    text-align: center; 
+}
+
+.scrobble-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.scrobble-card h3 {
+    color: #e4141e;
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem 1rem;
+}
+
+.scrobble-card p {
+    font-size: 0.9rem;
+    color: white;
+    margin: 0 1rem 1rem 1rem;
+}
+
+.scrobble-card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    background-image: url(../imgs/festival.jpg) ;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.login-card {
+    background-color: #000000be;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    text-align: center;
+}
+
+.login-card h1 {
+    color: #d61f07e3;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.login-card h2{
+    color:white;   
+    font-weight: bold; 
+}
+
+.form-group {
+    color: white;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    color: white;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+}
+
+.form-group input:focus {
+    border-color: #e4141e;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(255, 111, 0, 0.4);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #e4141e;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #990910;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(14, 10, 8, 0.4);
+}
+
+.login-footer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.login-footer a {
+    color: #e4141e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+.login-logo {
+    width: 250px;
+    height: auto;
+    margin-bottom: 1.5rem; 
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f9f9f9;
+}
+
+.profile-icon {
+    font-size: 2.5rem;
+    color: #e4141e;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar{
+    margin-left: 20%;
+}
+
+@media(max-width: 769px){
+    .navbar{
+         margin-left: 0%;}
+}

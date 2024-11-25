@@ -1,0 +1,48 @@
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="logo">
+        <a href="/">
+            <img src="../imgs/logo.png" alt="LastFm Logo">
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/scrobbles">Scrobbles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/logout">Sair</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="../imgs/festival.jpg" alt="Festival" class="hero-img">
+  <div class="bar">
+    <a href="/add_scrobble" class="nav-link active" title="Adicionar Scrobbles"><h1>➕</h1></a>
+    <br>
+    <br>
+    <H1>Veja as suas músicas...</H1>
+  </div>
+</section>
+
+<section class="scrobbles">
+    {{#each scrobbles}}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{title}}</h5>
+               <h6 class="card-subtitle mb-2 text-body-secondary">{{genero}}</h6>
+                <p class="card-text">Scrobblada por {{user}}</p> 
+                <a href="/manage_scrobble/{{id}}" class="card-link">Ver e Editar Música</a>
+            </div>
+        </div>
+    {{/each}}
+</section>
+
